@@ -6,5 +6,11 @@
              x:DataType="local:MainPage"
              x:Class="Community.MainPage">
 
-     <Label HorizontalOptions="Center" FontSize="Medium" Text="This text should not be visible" IsVisible="{Binding Source={x:Static services:Utilities.FalseValue}}"/>
+    <VerticalStackLayout>
+        <Label HorizontalOptions="Center" FontSize="Medium" Text="This text should not be visible" IsVisible="{Binding Source={x:Static services:Utilities.FalseValue}}"/>
+        <Label HorizontalOptions="Center" FontSize="Medium" 
+            Text="{Binding Source={x:Static services:Utilities.FalseValue},
+            StringFormat='FalseValue = {0}',
+            TargetNullValue='FalseValue evaluated to null'}"/>
+    </VerticalStackLayout>
 </ContentPage>
